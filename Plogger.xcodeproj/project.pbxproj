@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC27A36719D06ED2004DDF02 /* poos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC27A36519D06ED2004DDF02 /* poos.xcdatamodeld */; };
 		CCDAD96919D01C7400B9F5FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAD96819D01C7400B9F5FB /* AppDelegate.swift */; };
 		CCDAD96B19D01C7400B9F5FB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAD96A19D01C7400B9F5FB /* FirstViewController.swift */; };
 		CCDAD96D19D01C7400B9F5FB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAD96C19D01C7400B9F5FB /* SecondViewController.swift */; };
@@ -14,6 +15,7 @@
 		CCDAD97219D01C7500B9F5FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCDAD97119D01C7500B9F5FB /* Images.xcassets */; };
 		CCDAD97519D01C7500B9F5FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDAD97319D01C7500B9F5FB /* LaunchScreen.xib */; };
 		CCDAD98119D01C7500B9F5FB /* PloggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAD98019D01C7500B9F5FB /* PloggerTests.swift */; };
+		CCDAD98D19D01D0400B9F5FB /* PooManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDAD98C19D01D0400B9F5FB /* PooManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC27A36619D06ED2004DDF02 /* poos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = poos.xcdatamodel; sourceTree = "<group>"; };
 		CCDAD96319D01C7400B9F5FB /* Plogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDAD96719D01C7400B9F5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCDAD96819D01C7400B9F5FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		CCDAD97A19D01C7500B9F5FB /* PloggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PloggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDAD97F19D01C7500B9F5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCDAD98019D01C7500B9F5FB /* PloggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggerTests.swift; sourceTree = "<group>"; };
+		CCDAD98C19D01D0400B9F5FB /* PooManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PooManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +86,12 @@
 				CCDAD96819D01C7400B9F5FB /* AppDelegate.swift */,
 				CCDAD96A19D01C7400B9F5FB /* FirstViewController.swift */,
 				CCDAD96C19D01C7400B9F5FB /* SecondViewController.swift */,
+				CC27A36519D06ED2004DDF02 /* poos.xcdatamodeld */,
 				CCDAD96E19D01C7500B9F5FB /* Main.storyboard */,
 				CCDAD97119D01C7500B9F5FB /* Images.xcassets */,
 				CCDAD97319D01C7500B9F5FB /* LaunchScreen.xib */,
 				CCDAD96619D01C7400B9F5FB /* Supporting Files */,
+				CCDAD98C19D01D0400B9F5FB /* PooManager.swift */,
 			);
 			path = Plogger;
 			sourceTree = "<group>";
@@ -215,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDAD98D19D01D0400B9F5FB /* PooManager.swift in Sources */,
 				CCDAD96D19D01C7400B9F5FB /* SecondViewController.swift in Sources */,
+				CC27A36719D06ED2004DDF02 /* poos.xcdatamodeld in Sources */,
 				CCDAD96919D01C7400B9F5FB /* AppDelegate.swift in Sources */,
 				CCDAD96B19D01C7400B9F5FB /* FirstViewController.swift in Sources */,
 			);
@@ -341,20 +349,24 @@
 		CCDAD98519D01C7500B9F5FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				INFOPLIST_FILE = Plogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CCDAD98619D01C7500B9F5FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				INFOPLIST_FILE = Plogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +423,7 @@
 				CCDAD98619D01C7500B9F5FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCDAD98719D01C7500B9F5FB /* Build configuration list for PBXNativeTarget "PloggerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,8 +432,22 @@
 				CCDAD98919D01C7500B9F5FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC27A36519D06ED2004DDF02 /* poos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC27A36619D06ED2004DDF02 /* poos.xcdatamodel */,
+			);
+			currentVersion = CC27A36619D06ED2004DDF02 /* poos.xcdatamodel */;
+			path = poos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CCDAD95B19D01C7400B9F5FB /* Project object */;
 }
