@@ -44,7 +44,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         let type = Int(round(sldrPooType.value))
         
-        imgHolder.image = UIImage(named: "type_\(type)") as UIImage
+        imgHolder.image = UIImage(named: "type_\(type)")
         
         lblShowType.text = "Type \(type)";
         
@@ -70,7 +70,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     //so the keyboard goes away when you tap away from the textFields
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     

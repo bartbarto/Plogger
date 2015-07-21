@@ -59,10 +59,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         pooArray = pooMgr.loadPoo()
         
-        let pooType: AnyObject = pooArray[indexPath.row].valueForKey("type");
+        let pooType: AnyObject = pooArray[indexPath.row].valueForKey("type")!;
         
         cell.textLabel!.text = "Type \(pooType)"
-        cell.detailTextLabel!.text = dateToString(pooArray[indexPath.row].valueForKey("date") as NSDate)
+        cell.detailTextLabel!.text = dateToString(pooArray[indexPath.row].valueForKey("date") as! NSDate)
                 
         return cell;
     

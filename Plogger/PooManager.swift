@@ -30,10 +30,10 @@ class PooManager: NSObject {
     func addPoo(dato: NSDate, type: Int){
         poos.append(poo(date: dato, type: type))
         
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context: NSManagedObjectContext = appDel.managedObjectContext!
         
-        var newPoo = NSEntityDescription.insertNewObjectForEntityForName("Poos", inManagedObjectContext: context) as NSManagedObject
+        var newPoo = NSEntityDescription.insertNewObjectForEntityForName("Poos", inManagedObjectContext: context)
         newPoo.setValue(dato, forKey: "date")
         newPoo.setValue(type, forKey: "type")
         
@@ -44,7 +44,7 @@ class PooManager: NSObject {
     }
     
     func loadPoo() -> Array<AnyObject>{
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context: NSManagedObjectContext = appDel.managedObjectContext!
         
         var request = NSFetchRequest(entityName: "Poos")
@@ -60,11 +60,11 @@ class PooManager: NSObject {
 //            println("nothing found... :(")
 //        }
         context.save(nil)
-        return results
+        return results as Array
     }
     
     func deletePoo(indexPath: NSIndexPath?, callback: (), tableview: UITableView?){
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context: NSManagedObjectContext = appDel.managedObjectContext!
         
         var req = NSFetchRequest(entityName: "Poos")
@@ -75,7 +75,7 @@ class PooManager: NSObject {
 //        println("deleting item with index \(indexPath.row)")
         
         if let tv = tableview{
-            context.deleteObject(list[indexPath!.row] as NSManagedObject)
+            context.deleteObject(list[indexPath!.row] as! NSManagedObject)
             tv.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         
         }
